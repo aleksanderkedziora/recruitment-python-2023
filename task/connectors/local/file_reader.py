@@ -13,5 +13,5 @@ class ExampleFileReader:
             return json.load(file)
 
     @property
-    def data(self):
+    def data(self) -> dict:
         return self._data

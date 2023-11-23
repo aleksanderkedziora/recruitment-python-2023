@@ -1,0 +1,606 @@
+[
+ {
+  "Symbol waluty (kod ISO)": "AED",
+  "Nazwa polska": "Dirham, Zjednoczone Emiraty Arabskie"
+ },
+ {
+  "Symbol waluty (kod ISO)": "AFN",
+  "Nazwa polska": "Afgani,  Afganistan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ALL",
+  "Nazwa polska": "Lek, Albania"
+ },
+ {
+  "Symbol waluty (kod ISO)": "AMD",
+  "Nazwa polska": "Dram, Armenia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ANG",
+  "Nazwa polska": "Gulden antylski, Curacao i Saint Maarten"
+ },
+ {
+  "Symbol waluty (kod ISO)": "AOA",
+  "Nazwa polska": "Kwanza, Angola"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ARS",
+  "Nazwa polska": "Peso, Argentyna"
+ },
+ {
+  "Symbol waluty (kod ISO)": "AUD",
+  "Nazwa polska": "Dolar, Australia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "AWG",
+  "Nazwa polska": "Gulden, Aruba"
+ },
+ {
+  "Symbol waluty (kod ISO)": "AZN",
+  "Nazwa polska": "Manat, Azerbejdżan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BAM",
+  "Nazwa polska": "Wym. marki, Bośnia i Hercegowina"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BBD",
+  "Nazwa polska": "Dolar, Barbados"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BDT",
+  "Nazwa polska": "Taka, Bangladesz"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BGN",
+  "Nazwa polska": "Lew, Bułgaria"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BHD",
+  "Nazwa polska": "Dinar, Bahrajn"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BIF",
+  "Nazwa polska": "Frank, Burundi"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BND",
+  "Nazwa polska": "Dolar, Brunei"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BOB",
+  "Nazwa polska": "Boliwiano, Boliwia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BRL",
+  "Nazwa polska": "Real, Brazylia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BSD",
+  "Nazwa polska": "Dolar, Bahamy"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BWP",
+  "Nazwa polska": "Pula, Botswana"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BYN",
+  "Nazwa polska": "Rubel, Białoruś"
+ },
+ {
+  "Symbol waluty (kod ISO)": "BZD",
+  "Nazwa polska": "Dolar, Belize"
+ },
+ {
+  "Symbol waluty (kod ISO)": "CAD",
+  "Nazwa polska": "Dolar, Kanada"
+ },
+ {
+  "Symbol waluty (kod ISO)": "CDF",
+  "Nazwa polska": "Frank, Kongo, Republika Demokratyczna"
+ },
+ {
+  "Symbol waluty (kod ISO)": "CHF",
+  "Nazwa polska": "Frank, Szwajcaria"
+ },
+ {
+  "Symbol waluty (kod ISO)": "CLP",
+  "Nazwa polska": "Peso, Chile"
+ },
+ {
+  "Symbol waluty (kod ISO)": "CNY",
+  "Nazwa polska": "Yuan renminbi, Chiny"
+ },
+ {
+  "Symbol waluty (kod ISO)": "COP",
+  "Nazwa polska": "Peso, Kolumbia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "CRC",
+  "Nazwa polska": "Colon, Kostaryka"
+ },
+ {
+  "Symbol waluty (kod ISO)": "CUP",
+  "Nazwa polska": "Peso, Kuba"
+ },
+ {
+  "Symbol waluty (kod ISO)": "CVE",
+  "Nazwa polska": "Escudo, Republika Zielonego Przylądka"
+ },
+ {
+  "Symbol waluty (kod ISO)": "CZK",
+  "Nazwa polska": "Korona, Republika Czeska"
+ },
+ {
+  "Symbol waluty (kod ISO)": "DJF",
+  "Nazwa polska": "Frank, Dżibuti"
+ },
+ {
+  "Symbol waluty (kod ISO)": "DKK",
+  "Nazwa polska": "Korona, Dania"
+ },
+ {
+  "Symbol waluty (kod ISO)": "DOP",
+  "Nazwa polska": "Peso, Dominikana"
+ },
+ {
+  "Symbol waluty (kod ISO)": "DZD",
+  "Nazwa polska": "Dinar, Algieria"
+ },
+ {
+  "Symbol waluty (kod ISO)": "EGP",
+  "Nazwa polska": "Funt, Egipt"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ERN",
+  "Nazwa polska": "Nakfa, Erytrea"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ETB",
+  "Nazwa polska": "Birr, Etiopia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "EUR",
+  "Nazwa polska": "Euro"
+ },
+ {
+  "Symbol waluty (kod ISO)": "FJD",
+  "Nazwa polska": "Dolar, Fidżi"
+ },
+ {
+  "Symbol waluty (kod ISO)": "GBP",
+  "Nazwa polska": "Funt szterling, Wielka Brytania"
+ },
+ {
+  "Symbol waluty (kod ISO)": "GEL",
+  "Nazwa polska": "Lari, Gruzja"
+ },
+ {
+  "Symbol waluty (kod ISO)": "GHS",
+  "Nazwa polska": "Cedi,  Ghana"
+ },
+ {
+  "Symbol waluty (kod ISO)": "GIP",
+  "Nazwa polska": "Funt,  Gibraltar"
+ },
+ {
+  "Symbol waluty (kod ISO)": "GMD",
+  "Nazwa polska": "Dalasi, Gambia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "GNF",
+  "Nazwa polska": "Frank, Gwinea"
+ },
+ {
+  "Symbol waluty (kod ISO)": "GTQ",
+  "Nazwa polska": "Quetzal, Gwatemala"
+ },
+ {
+  "Symbol waluty (kod ISO)": "GYD",
+  "Nazwa polska": "Dolar, Gujana"
+ },
+ {
+  "Symbol waluty (kod ISO)": "HKD",
+  "Nazwa polska": "Dolar, Hongkong"
+ },
+ {
+  "Symbol waluty (kod ISO)": "HNL",
+  "Nazwa polska": "Lempira, Honduras"
+ },
+ {
+  "Symbol waluty (kod ISO)": "HRK",
+  "Nazwa polska": "Kuna, Chorwacja"
+ },
+ {
+  "Symbol waluty (kod ISO)": "HTG",
+  "Nazwa polska": "Gourde, Haiti"
+ },
+ {
+  "Symbol waluty (kod ISO)": "HUF",
+  "Nazwa polska": "Forint, Węgry"
+ },
+ {
+  "Symbol waluty (kod ISO)": "IDR",
+  "Nazwa polska": "Rupia, Indonezja"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ILS",
+  "Nazwa polska": "Nowy szekel, Izrael"
+ },
+ {
+  "Symbol waluty (kod ISO)": "INR",
+  "Nazwa polska": "Rupia, Indie"
+ },
+ {
+  "Symbol waluty (kod ISO)": "IQD",
+  "Nazwa polska": "Dinar, Irak"
+ },
+ {
+  "Symbol waluty (kod ISO)": "IRR",
+  "Nazwa polska": "Rial, Iran"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ISK",
+  "Nazwa polska": "Korona, Islandia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "JMD",
+  "Nazwa polska": "Dolar, Jamajka"
+ },
+ {
+  "Symbol waluty (kod ISO)": "JOD",
+  "Nazwa polska": "Dinar, Jordania"
+ },
+ {
+  "Symbol waluty (kod ISO)": "JPY",
+  "Nazwa polska": "Jen, Japonia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "KES",
+  "Nazwa polska": "Szyling Kenia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "KGS",
+  "Nazwa polska": "Som, Kirgistan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "KHR",
+  "Nazwa polska": "Riel, Kambodża"
+ },
+ {
+  "Symbol waluty (kod ISO)": "KMF",
+  "Nazwa polska": "Frank, Komory"
+ },
+ {
+  "Symbol waluty (kod ISO)": "KRW",
+  "Nazwa polska": "Won, Korea Południowa"
+ },
+ {
+  "Symbol waluty (kod ISO)": "KWD",
+  "Nazwa polska": "Dinar, Kuwejt"
+ },
+ {
+  "Symbol waluty (kod ISO)": "KZT",
+  "Nazwa polska": "Tenge, Kazachstan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "LAK",
+  "Nazwa polska": "Kip, Laos"
+ },
+ {
+  "Symbol waluty (kod ISO)": "LBP",
+  "Nazwa polska": "Funt, Liban"
+ },
+ {
+  "Symbol waluty (kod ISO)": "LKR",
+  "Nazwa polska": "Rupia, Sri Lanka"
+ },
+ {
+  "Symbol waluty (kod ISO)": "LRD",
+  "Nazwa polska": "Dolar, Liberia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "LSL",
+  "Nazwa polska": "Loti, Lesotho"
+ },
+ {
+  "Symbol waluty (kod ISO)": "LYD",
+  "Nazwa polska": "Dinar, Libia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MAD",
+  "Nazwa polska": "Dirham, Maroko"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MDL",
+  "Nazwa polska": "Lej, Mołdawia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MGA",
+  "Nazwa polska": "Ariary, Madagaskar"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MKD",
+  "Nazwa polska": "Denar, Macedonia Północna"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MMK",
+  "Nazwa polska": "Kyat, Myanmar, Birma"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MNT",
+  "Nazwa polska": "Tugrik, Mongolia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MOP",
+  "Nazwa polska": "Pataca, Makau"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MRU",
+  "Nazwa polska": "Ouguiya, Mauretania"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MUR",
+  "Nazwa polska": "Rupia, Mauritius"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MVR",
+  "Nazwa polska": "Rupia, Malediwy"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MWK",
+  "Nazwa polska": "Kwacha, Malawi"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MXN",
+  "Nazwa polska": "Peso, Meksyk"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MYR",
+  "Nazwa polska": "Ringgit, Malezja"
+ },
+ {
+  "Symbol waluty (kod ISO)": "MZN",
+  "Nazwa polska": "Metical, Mozambik"
+ },
+ {
+  "Symbol waluty (kod ISO)": "NAD",
+  "Nazwa polska": "Dolar, Namibia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "NGN",
+  "Nazwa polska": "Naira, Nigeria"
+ },
+ {
+  "Symbol waluty (kod ISO)": "NIO",
+  "Nazwa polska": "Cordoba Oro, Nikaragua"
+ },
+ {
+  "Symbol waluty (kod ISO)": "NOK",
+  "Nazwa polska": "Korona, Norwegia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "NPR",
+  "Nazwa polska": "Rupia, Nepal"
+ },
+ {
+  "Symbol waluty (kod ISO)": "NZD",
+  "Nazwa polska": "Dolar, Nowa Zelandia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "OMR",
+  "Nazwa polska": "Rial, Oman"
+ },
+ {
+  "Symbol waluty (kod ISO)": "PAB",
+  "Nazwa polska": "Balboa, Panama"
+ },
+ {
+  "Symbol waluty (kod ISO)": "PEN",
+  "Nazwa polska": "Nuevo sol, Peru"
+ },
+ {
+  "Symbol waluty (kod ISO)": "PGK",
+  "Nazwa polska": "Kina, Papua - Nowa Gwinea"
+ },
+ {
+  "Symbol waluty (kod ISO)": "PHP",
+  "Nazwa polska": "Peso, Filipiny"
+ },
+ {
+  "Symbol waluty (kod ISO)": "PKR",
+  "Nazwa polska": "Rupia, Pakistan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "PLN",
+  "Nazwa polska": "Złoty, Polska"
+ },
+ {
+  "Symbol waluty (kod ISO)": "PYG",
+  "Nazwa polska": "Guarani, Paragwaj"
+ },
+ {
+  "Symbol waluty (kod ISO)": "QAR",
+  "Nazwa polska": "Rial, Katar"
+ },
+ {
+  "Symbol waluty (kod ISO)": "RON",
+  "Nazwa polska": "Lej, Rumunia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "RSD",
+  "Nazwa polska": "Dinar, Serbia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "RUB",
+  "Nazwa polska": "Rubel, Rosja"
+ },
+ {
+  "Symbol waluty (kod ISO)": "RWF",
+  "Nazwa polska": "Frank, Rwanda"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SAR",
+  "Nazwa polska": "Rial, Arabia Saudyjska"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SBD",
+  "Nazwa polska": "Dolar, Wyspy Salomona"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SCR",
+  "Nazwa polska": "Rupia, Seszele"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SDG",
+  "Nazwa polska": "Funt, Sudan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SEK",
+  "Nazwa polska": "Korona, Szwecja"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SGD",
+  "Nazwa polska": "Dolar, Singapur"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SLL",
+  "Nazwa polska": "Leone, Sierra Leone"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SOS",
+  "Nazwa polska": "Szyling, Somalia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SRD",
+  "Nazwa polska": "Dolar, Surinam"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SSP",
+  "Nazwa polska": "Funt, Południowy Sudan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "STN",
+  "Nazwa polska": "Dobra, Wyspy Św. Tomasza i Książąca"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SVC",
+  "Nazwa polska": "Colon, Salwador"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SYP",
+  "Nazwa polska": "Funt, Syria"
+ },
+ {
+  "Symbol waluty (kod ISO)": "SZL",
+  "Nazwa polska": "Lilangeni, Suazi"
+ },
+ {
+  "Symbol waluty (kod ISO)": "THB",
+  "Nazwa polska": "Bat, Tajlandia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "TJS",
+  "Nazwa polska": "Somoni, Tadżykistan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "TMT",
+  "Nazwa polska": "Nowy manat, Turkmenistan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "TND",
+  "Nazwa polska": "Dinar, Tunezja"
+ },
+ {
+  "Symbol waluty (kod ISO)": "TOP",
+  "Nazwa polska": "Paanga, Tonga"
+ },
+ {
+  "Symbol waluty (kod ISO)": "TRY",
+  "Nazwa polska": "Lira, Turcja"
+ },
+ {
+  "Symbol waluty (kod ISO)": "TTD",
+  "Nazwa polska": "Dolar, Trynidad i Tobago"
+ },
+ {
+  "Symbol waluty (kod ISO)": "TWD",
+  "Nazwa polska": "Nowy dolar, Tajwan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "TZS",
+  "Nazwa polska": "Szyling, Tanzania"
+ },
+ {
+  "Symbol waluty (kod ISO)": "UAH",
+  "Nazwa polska": "Hrywna, Ukraina"
+ },
+ {
+  "Symbol waluty (kod ISO)": "UGX",
+  "Nazwa polska": "Szyling, Uganda"
+ },
+ {
+  "Symbol waluty (kod ISO)": "USD",
+  "Nazwa polska": "Dolar USA"
+ },
+ {
+  "Symbol waluty (kod ISO)": "UYU",
+  "Nazwa polska": "Peso, Urugwaj"
+ },
+ {
+  "Symbol waluty (kod ISO)": "UZS",
+  "Nazwa polska": "Sum, Uzbekistan"
+ },
+ {
+  "Symbol waluty (kod ISO)": "VES",
+  "Nazwa polska": "Boliwar, Wenezuela"
+ },
+ {
+  "Symbol waluty (kod ISO)": "VND",
+  "Nazwa polska": "Dong, Wietnam"
+ },
+ {
+  "Symbol waluty (kod ISO)": "VUV",
+  "Nazwa polska": "Vatu, Vanuatu"
+ },
+ {
+  "Symbol waluty (kod ISO)": "WST",
+  "Nazwa polska": "Tala, Samoa "
+ },
+ {
+  "Symbol waluty (kod ISO)": "XAF",
+  "Nazwa polska": "Frank CFA BEAC"
+ },
+ {
+  "Symbol waluty (kod ISO)": "XCD",
+  "Nazwa polska": "Dolar Wschodniokaraibski"
+ },
+ {
+  "Symbol waluty (kod ISO)": "XDR",
+  "Nazwa polska": "SDR"
+ },
+ {
+  "Symbol waluty (kod ISO)": "XOF",
+  "Nazwa polska": "Frank CFA BCEAO"
+ },
+ {
+  "Symbol waluty (kod ISO)": "XPF",
+  "Nazwa polska": "Frank CFP"
+ },
+ {
+  "Symbol waluty (kod ISO)": "YER",
+  "Nazwa polska": "Rial, Jemen"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ZAR",
+  "Nazwa polska": "Rand, Republika Południowej Afryki"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ZMW",
+  "Nazwa polska": "Kwacha, Zambia"
+ },
+ {
+  "Symbol waluty (kod ISO)": "ZWL",
+  "Nazwa polska": "Dolar, Zimbabwe"
+ }
+]

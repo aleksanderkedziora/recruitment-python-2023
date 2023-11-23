@@ -1,51 +1,37 @@
-from logging import getLogger
+import logging
+from logging.config import dictConfig
 
 from task import config
-from task.connectors.database.sqlite import SqliteDatabaseConnector
+from task.setup_loger import setup_loger
+
+from task.utils import get_parser, set_run_config
 from .currency_converter import PriceCurrencyConverterToPLN
-import argparse
 
-logger = getLogger(__name__)
+logger = setup_loger(__name__)
 
-
-def parse_args():
-    parser = argparse.ArgumentParser(description="")
-    parser.add_argument('currency', help='ISO code of currency')
-    parser.add_argument('price', help='ISO code of currency')
-    parser.add_argument(
-        '--mode',
-        default='PROD'
-    )
-    parser.add_argument(
-        '-s',
-        '--source',
-        help='original price which will be converted to PLN',
-        default='API'
-    )
-    return parser
+streamHandler = logging.StreamHandler()
+logger.addHandler(streamHandler)
 
 
 def main(args):
-    config.USE_LOCAL = 1 if args.source == 'LOCAL' else 0
-    config.DEV = 1 if args.mode == 'DEV' else 0
+    set_run_config(args)
 
-    if not config.DEV:
-        try:
-            SqliteDatabaseConnector().initialize_db()
-        except Exception as err:
-            print(err)
-
+    logger.info(f"STARTING EXECUTING SCRIPT WITH ARGUMENTS: "
+                f"currency: {args.currency},"
+                f"price: {args.price},"
+                f"source: {config.RUN_CONFIG['SOURCE']},"
+                f"mode: {config.RUN_CONFIG['MODE']}")
     try:
-        PriceCurrencyConverterToPLN().convert_to_pln(
+        res = PriceCurrencyConverterToPLN().convert_to_pln(
             currency=args.currency,
             price=args.price
         )
-        logger.info("Job done!")
-    except Exception as err:
-        print(err)
+        logger.info(f"JOB DONE! The result is {str(res)}\n")
+    except Exception as e:
+        logger.error(f'{"Conversion failed due to:".upper()} {e}\n')
 
 
 if __name__ == "__main__":
-    parser = parse_args()
+    parser = get_parser()
     args = parser.parse_args()
     main(args)
