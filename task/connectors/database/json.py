@@ -4,12 +4,15 @@ from typing import TYPE_CHECKING
 
 import json
 from task.config import JSON_DATABASE_NAME
+from task.connectors.database.interface import DBConnectorInterface
 
 if TYPE_CHECKING:
     from task.currency_converter import ConvertedPricePLN
 
 
-class JsonFileDatabaseConnector:
+class JsonFileDatabaseConnector(DBConnectorInterface):
+    """Enables to connect and do some operations ond JSON database"""
+
     def __init__(self) -> None:
         self._data = self._read_data()
 
@@ -18,26 +21,28 @@ class JsonFileDatabaseConnector:
         with open(JSON_DATABASE_NAME, "r") as file:
             return json.load(file)
 
-    def save(self, entity: ConvertedPricePLN) -> int:
+    def save(self, entity: ConvertedPricePLN) -> None:  # changed int to None, to keep consistency
         generated_id = self._generate_id()
 
         data_item = {'id': generated_id}
-        data_item.update(entity.get_dict_representation())
+        data_item.update(entity.serialize())
 
         self._data.update({generated_id: data_item})
         self._write_data_to_db()
 
-        return generated_id
+    def get_all(self, entity_cls: [ConvertedPricePLN]) -> list[ConvertedPricePLN]:
+        """Gets necessary data from (json) dict and maps into list of ConvertedPricePLN instances"""
+        return [entity_cls.deserialize(v) for _, v in self._data.items()]
 
-    def get_all(self) -> list[...]:
-        raise NotImplementedError()
+    def get_by_id(self, entity_cls: [ConvertedPricePLN], id_: int) -> ConvertedPricePLN:
+        """Gets necessary data from (json) dict by input id and maps into ConvertedPricePLN instance"""
+        return [entity_cls.deserialize(v) for _, v in self._data.items() if v['id'] == id_][0]
 
-    def get_by_id(self) -> ConvertedPricePLN:
-        raise NotImplementedError()
-
-    def _generate_id(self):
+    def _generate_id(self) -> int:
+        """Generates next id"""
         return max((obj['id'] for obj in self._data.values())) + 1
 
-    def _write_data_to_db(self):
+    def _write_data_to_db(self) -> None:
+        """Writes self._data to json file"""
         with open(JSON_DATABASE_NAME, 'w') as file:
             json.dump(self._data, file, indent=2)

@@ -7,6 +7,7 @@ logger = setup_loger(__name__)
 
 
 def validate_config_attr(enum_cls):
+    """Checks if crucial configuration dict is filled properly"""
     def outer_wrapper(func):
         @wraps(func)
         def inner_wrapper(*args, **kwargs):

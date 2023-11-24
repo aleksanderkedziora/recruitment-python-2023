@@ -2,6 +2,7 @@ import logging
 
 
 def setup_loger(name):
+    """Helps which getting logger with necessary configuration"""
     logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)
 

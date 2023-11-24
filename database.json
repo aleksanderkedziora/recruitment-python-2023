@@ -215,5 +215,47 @@
     "rate": 0.179,
     "price_in_pln": 57.995999999999995,
     "date": "2023-11-23"
+  },
+  "33": {
+    "id": 33,
+    "currency": "eur",
+    "rate": 0.18,
+    "price_in_pln": 18.0,
+    "date": "2023-11-24"
+  },
+  "34": {
+    "id": 34,
+    "currency": "eur",
+    "rate": 4.2,
+    "price_in_pln": 420.0,
+    "date": "2023-11-24"
+  },
+  "35": {
+    "id": 35,
+    "currency": "eur",
+    "rate": 4.2,
+    "price_in_pln": 420.0,
+    "date": "2023-11-24"
+  },
+  "36": {
+    "id": 36,
+    "currency": "eur",
+    "rate": 4.2,
+    "price_in_pln": 420.0,
+    "date": "2023-11-24"
+  },
+  "37": {
+    "id": 37,
+    "currency": "eur",
+    "rate": 4.2,
+    "price_in_pln": 2100.0,
+    "date": "2023-11-24"
+  },
+  "38": {
+    "id": 38,
+    "currency": "eur",
+    "rate": 4.2,
+    "price_in_pln": 2101.4377,
+    "date": "2023-11-24"
   }
 }

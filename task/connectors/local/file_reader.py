@@ -4,6 +4,8 @@ from task.config import LOCAL_DATA_SOURCES
 
 
 class ExampleFileReader:
+    """Converts json to python dict"""
+
     def __init__(self) -> None:
         self._data = self._read_data()
 

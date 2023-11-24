@@ -15,6 +15,7 @@ logger = setup_loger(__name__)
 
 
 class AbstractCurrencyRateFetcher(ABC):
+    """Helper class which helps to get rate and then store it with fetching metadata"""
 
     def __init__(self, currency: str):
         self._currency = currency
@@ -50,21 +51,39 @@ class AbstractCurrencyRateFetcher(ABC):
 
 
 class LocalSourceCurrencyRateFetcher(AbstractCurrencyRateFetcher):
+    """Fetcher to get rate for today from example_currency_rates.json file"""
 
-    def _get_exchange_rate_data_for_currency(self, source_data: dict) -> dict:
+    def _get_exchange_rate_data_for_currency(self, source_data: dict) -> list:
+        """
+        Due to json file structure it tries to get value for currency ISO code.
+
+        :param source_data: dictionary where keys are currency ISO codes and values are
+        list of dicts with keys: date, rate and values for these keys
+        :return: list of dicts with keys: date, rate and values for these keys
+        """
         try:
             return source_data[self.currency.upper()]
         except KeyError as e:
             logger.exception('Key error occurred:')
             raise Exception('There is no exchange rate for the specified currency in example file') from e
 
-    def _get_rate(self, currency_data: dict) -> float:  # Note that rates are sorted from newest to oldest items.
+    def _get_rate(self, currency_data: list) -> float:
+        """
+        Due to json file structure value for currency code key is a list with dicts,
+        which stores data about rate and date for it. Note that in json example file values
+        are order from newest to oldest, this is the reason why generator is used here.
+        We want to get first matching value for date.
+
+        :param currency_data: list of dicts with keys: date, rate and values for these keys
+        :return: rate converted to float format
+        """
+
         rate_by_date_gen = ((d['date'], d['rate']) for d in currency_data)  # so generator might be better in this case
 
         rate = None
-        for item in rate_by_date_gen:
-            if item[0] == self.fetch_date:
-                rate = item[1]
+        for tup_date, tup_rate in rate_by_date_gen:
+            if tup_date == self.fetch_date:
+                rate = tup_rate
                 break
 
         if rate is None:
@@ -86,9 +105,16 @@ class LocalSourceCurrencyRateFetcher(AbstractCurrencyRateFetcher):
 
 
 class ApiSourceCurrencyRateFetcher(AbstractCurrencyRateFetcher):
+    """Fetcher to get rate for today with NBP API"""
 
     @staticmethod
     def _handle_response_200(response: Response) -> float:
+        """
+        Checks if response format is proper and returns wanted rate value
+
+        :param response:
+        :return: rate converted to float
+        """
         if 'application/json' in response.headers.get('content-type', ''):
             data = response.json()
             rate = data.get('rates', [{}])[0].get('mid')
@@ -103,7 +129,13 @@ class ApiSourceCurrencyRateFetcher(AbstractCurrencyRateFetcher):
             logger.error("Unexpected response content type: %s", response.headers.get('content-type', ''))
             raise TypeError("Error: Unexpected response content type")
 
-    def _handle_response(self, response: Response):
+    def _handle_response(self, response: Response) -> float:
+        """
+        Checks if response is proper, if it is, it returns rate
+
+        :param response:
+        :return: rate converted to float
+        """
 
         try:
             response.raise_for_status()
@@ -125,6 +157,7 @@ class ApiSourceCurrencyRateFetcher(AbstractCurrencyRateFetcher):
         return f'http://api.nbp.pl/api/exchangerates/rates/a/{self.currency.lower()}/today/?format = json'
 
     def _fetch_rate_with_api(self) -> float:
+        """Makes request to API url"""
         response = requests.get(self._get_url())
         return self._handle_response(response)
 
@@ -134,6 +167,7 @@ class ApiSourceCurrencyRateFetcher(AbstractCurrencyRateFetcher):
 
 @validate_config_attr(Source)
 def _get_rate_fetcher_class() -> Type[Union[LocalSourceCurrencyRateFetcher, ApiSourceCurrencyRateFetcher]]:
+    """Returns Fetcher class depending on run source"""
     if config.RUN_CONFIG['SOURCE'] == Source.LOCAL.value:
         return LocalSourceCurrencyRateFetcher
 
@@ -141,4 +175,5 @@ def _get_rate_fetcher_class() -> Type[Union[LocalSourceCurrencyRateFetcher, ApiS
 
 
 def get_rate_data(currency: str) -> Union[LocalSourceCurrencyRateFetcher, ApiSourceCurrencyRateFetcher]:
+    """Initializes concrete fetcher class instance with currency code input value"""
     return _get_rate_fetcher_class()(currency)
