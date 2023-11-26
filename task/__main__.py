@@ -13,7 +13,10 @@ streamHandler = logging.StreamHandler()
 logger.addHandler(streamHandler)
 
 
-def main(args):
+def main():
+    parser = get_parser()
+    args = parser.parse_args()
+
     set_run_config(args)
 
     logger.info(f"STARTING EXECUTING SCRIPT WITH ARGUMENTS: "
@@ -27,11 +30,13 @@ def main(args):
             price=args.price
         )
         logger.info(f"JOB DONE! The result is {str(res)}\n")
+        logger.info(f"Exit with code 0")
+        return 0
     except Exception as e:
         logger.error(f'{"Conversion failed due to:".upper()} {e}\n')
+        logger.info(f"Exit with code 1")
+        return 1
 
 
 if __name__ == "__main__":
-    parser = get_parser()
-    args = parser.parse_args()
-    main(args)
+    main()

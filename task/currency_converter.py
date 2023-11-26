@@ -54,7 +54,11 @@ class ConvertedPricePLN:
         if not isinstance(data, dict):
             data = data.__dict__
 
-        price_in_source_currency = convert(data['rate'], data['price_in_pln'], '/')
+        price_in_source_currency = convert(
+            price=data['price_in_pln'],
+            rate=data['rate'],
+            operator='/'
+        )
 
         return ConvertedPricePLN(
             price_in_source_currency=price_in_source_currency,
@@ -82,7 +86,11 @@ class PriceCurrencyConverterToPLN:
         rate_data = get_rate_data(currency)
 
         # Used it to avoid floating point error, I think object should 'store' rates and prices as Decimal objs.
-        price_in_pln = convert(rate_data.rate, price, '*')
+        price_in_pln = convert(
+            price=price,
+            rate=rate_data.rate,
+            operator='*'
+        )
 
         converted_price_pln = ConvertedPricePLN(
             price_in_source_currency=price,
@@ -92,7 +100,5 @@ class PriceCurrencyConverterToPLN:
             price_in_pln=price_in_pln
         )
         converted_price_pln.save()
-
-        print(ConvertedPricePLN.get_by_id(34))
 
         return converted_price_pln

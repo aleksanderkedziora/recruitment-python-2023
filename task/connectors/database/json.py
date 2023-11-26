@@ -3,7 +3,8 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 import json
-from task.config import JSON_DATABASE_NAME
+
+from task import config
 from task.connectors.database.interface import DBConnectorInterface
 
 if TYPE_CHECKING:
@@ -18,7 +19,7 @@ class JsonFileDatabaseConnector(DBConnectorInterface):
 
     @staticmethod
     def _read_data() -> dict:
-        with open(JSON_DATABASE_NAME, "r") as file:
+        with open(config.JSON_DATABASE_NAME, "r") as file:
             return json.load(file)
 
     def save(self, entity: ConvertedPricePLN) -> None:  # changed int to None, to keep consistency
@@ -36,13 +37,19 @@ class JsonFileDatabaseConnector(DBConnectorInterface):
 
     def get_by_id(self, entity_cls: [ConvertedPricePLN], id_: int) -> ConvertedPricePLN:
         """Gets necessary data from (json) dict by input id and maps into ConvertedPricePLN instance"""
-        return [entity_cls.deserialize(v) for _, v in self._data.items() if v['id'] == id_][0]
+        obj = [entity_cls.deserialize(v) for _, v in self._data.items() if v['id'] == id_]
+        if len(obj) == 0:
+            raise Exception(f'No object {entity_cls.__name__} with id={id_}.')
+
+        return obj[0]
 
     def _generate_id(self) -> int:
         """Generates next id"""
-        return max((obj['id'] for obj in self._data.values())) + 1
+        if self._data.values():
+            return max((obj['id'] for obj in self._data.values()))
+        return 1
 
     def _write_data_to_db(self) -> None:
         """Writes self._data to json file"""
-        with open(JSON_DATABASE_NAME, 'w') as file:
+        with open(config.JSON_DATABASE_NAME, 'w') as file:
             json.dump(self._data, file, indent=2)

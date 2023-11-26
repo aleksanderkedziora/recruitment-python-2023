@@ -1,6 +1,6 @@
 import json
 
-from task.config import LOCAL_DATA_SOURCES
+from task import config
 
 
 class ExampleFileReader:
@@ -11,7 +11,7 @@ class ExampleFileReader:
 
     @staticmethod
     def _read_data() -> dict:
-        with open(LOCAL_DATA_SOURCES, "r") as file:
+        with open(config.LOCAL_DATA_SOURCES, "r") as file:
             return json.load(file)
 
     @property

@@ -54,6 +54,7 @@ def get_parser() -> argparse.ArgumentParser:
 def set_run_config(args) -> None:
     """Sets config dict keys values"""
     mode = Mode.PROD.value
+    print(args)
     if args.dev:
         mode = Mode.DEV.value
 
@@ -87,7 +88,7 @@ def get_iso_codes_list() -> list:
         raise
 
 
-def convert(rate: float, price: float, operator: str) -> float:
+def convert(*, price: float, rate: float, operator: str) -> float:
     """Use it to avoid floating-point errors in calculations."""
 
     try:
@@ -95,7 +96,7 @@ def convert(rate: float, price: float, operator: str) -> float:
         price_decimal = Decimal(str(price))
 
         if operator == '*':
-            result_decimal = rate_decimal * price_decimal
+            result_decimal = price_decimal * rate_decimal
         elif operator == '/':
             result_decimal = price_decimal / rate_decimal
         else:
