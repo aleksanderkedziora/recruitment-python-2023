@@ -46,7 +46,7 @@ class JsonFileDatabaseConnector(DBConnectorInterface):
     def _generate_id(self) -> int:
         """Generates next id"""
         if self._data.values():
-            return max((obj['id'] for obj in self._data.values()))
+            return max((obj['id'] for obj in self._data.values())) + 1
         return 1
 
     def _write_data_to_db(self) -> None:

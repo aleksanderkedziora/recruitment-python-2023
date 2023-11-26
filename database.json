@@ -248,14 +248,21 @@
     "id": 37,
     "currency": "eur",
     "rate": 4.2,
-    "price_in_pln": 2100.0,
-    "date": "2023-11-24"
+    "price_in_pln": 420.0,
+    "date": "2023-11-26"
   },
   "38": {
     "id": 38,
     "currency": "eur",
     "rate": 4.2,
-    "price_in_pln": 2101.4377,
-    "date": "2023-11-24"
+    "price_in_pln": 420.0,
+    "date": "2023-11-26"
+  },
+  "39": {
+    "id": 39,
+    "currency": "eur",
+    "rate": 4.2,
+    "price_in_pln": 420.0,
+    "date": "2023-11-26"
   }
 }
